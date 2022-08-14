@@ -1,0 +1,7 @@
+@use '../../foundation/_variable' as *;
+
+.c-access {
+    &__map {
+        flex-basis: calc( 608 / 1180 * 100%);
+    }
+}

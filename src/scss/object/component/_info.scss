@@ -1,0 +1,9 @@
+@use '../../foundation/_variable' as *;
+
+.c-info {
+    &__hour {
+        font-size: 1.4rem;
+        height: 2rem;
+        margin-bottom: 15px;
+    }
+}

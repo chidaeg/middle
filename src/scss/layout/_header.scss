@@ -1,0 +1,8 @@
+@use '../foundation/_variable' as *;
+
+.l-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: $color-base;
+}
