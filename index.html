@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name=“robots” content=“noindex”>
-  <meta content="" name="description">
-  <!-- reset.css ress -->
-  <link rel="stylesheet" href="" />
+  <meta name="description" content="コーディングの手間を最小に、デザインに注力する助けに" >
+  <!-- reset.css destyle -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+  />
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-  <!-- original -->
+  <!-- original css -->
   <link rel="stylesheet" href="./public/css/sytle.css">
-  <title></title>
+  <title>ユアコーディング</title>
 </head>
 <body>
   <!-- header -->
@@ -21,31 +22,220 @@
     <div class="c-inner">
       <div class="l-header__content">
         <a href="#">
-          <div  class="l-header__logo"><img src="" alt="" width=""></div>
+          <h1 class="l-header__logo"><img src="./public/img/icon.png" alt="ユアコーディング" width="47">ユアコーディング</h1>
         </a>
+        <ul class="l-header-nav">
+          <li class="l-header-navItem">特徴</li>
+          <li class="l-header-navItem">価格</li>
+          <li class="l-header-navItem">お問い合わせ</li>
+        </ul>
+        <button class="c-btn">お問い合わせ</button>
+        <div class="l-header__spOpen">三</div>
       </div>
     </div>
   </header>
   <!-- //header -->
   <!-- main -->
   <main class="main">
-    <!-- section  -->
-    <section class="">
-    </section>
-    <!-- //section  -->
-    <!-- section  -->
-    <section class="l-section">
+    <!-- section fv -->
+    <section class="p-fv">
       <div class="c-inner">
-        
+        <div class="p-fv__content">
+          <h2 class="p-fv__title">コーディングの手間を<br>最小に、デザインに注力<br>する助けに</h2>
+          <p class="p-fv__text">ユアコーディングはコーディングに 特化したフリーランス デザインに注力されたい方の 助けになります</p>
+          <button class="c-btn">お問い合わせ</button>
+          <div class="p-fv__img"><img src="./public/img/top.png" alt="PCに向かって忙しく作業する男性のイラスト" width="518"></div>
+        </div>
       </div>
     </section>
-    <!-- //section  -->
+    <!-- //section fv -->
+    <!-- section feature -->
+    <section class="l-section p-feature">
+      <div class="c-inner">
+        <div class="c-sectionTitle">
+          <h3 class="c-sectionTitle__title">ユアコーディング3つの特徴</h3>
+          <p class="c-sectionTitle__en">FEATURES</p>
+        </div>
+        <section class="p-feature__unit">
+          <h4 class="p-feature__heading">高速コーディング</h4>
+          <div class="p-feature__flex">
+            <div class="p-feature__img"><img src="./public/img/feature01.png" alt="PCで作業する男性のイラスト"></div>
+            <div class="p-feature__text">
+              <p>コーディングに特化したフリーランスのため、 スピード感を持った開発が可能。</p>
+              <p>開発は常にスピードとの勝負です。 ユアコーディングはコーディングに特化しているため、 素早く納品することで、クライアントがデザインに注力する助けとなります。</p>
+            </div>
+          </div>
+        </section>
+        <section class="p-feature__unit">
+          <h4 class="p-feature__heading">高品質</h4>
+          <div class="p-feature__flex">
+            <div class="p-feature__img"><img src="./public/img/feature02.png" alt="壁を大きく使って議論する男性チームのイラスト"></div>
+            <div class="p-feature__text">
+              <p>正しいマークアップで、 内部SEOに強いコーディングを デフォルトで行います。</p>
+              <p>ユアコーディングでは、「予測しやすい」「再利用しやすい」 「保守しやすい」「拡張しやすい」と言った設計をもとにきちんとコーディングを行うため、納品後も安心です。</p>
+            </div>
+          </div>
+        </section>
+        <section class="p-feature__unit">
+          <h4 class="p-feature__heading">迅速なレスポンス</h4>
+          <div class="p-feature__flex">
+            <div class="p-feature__img"><img src="./public/img/feature03.png" alt="メールとその側で両手をあげる女性のイラスト"></div>
+            <div class="p-feature__text">
+              <p>原則いただいたメッセージは、 業務時間内であれば6時間以内に お返しいたします。</p>
+              <p>連絡を返さないフリーランスが多い中、 ユアコーディングでは定期的な進捗報告など、 社会人としての基本を踏まえて仕事を行なっております。</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- //section feature -->
+    <!-- section price -->
+    <section class="l-section p-price">
+      <div class="c-inner">
+        <div class="c-sectionTitle">
+          <h3 class="c-sectionTitle__title">価格</h3>
+          <p class="c-sectionTitle__en">PRICE</p>
+        </div>
+        <dl class="p-price__table">
+          <dt>HTMLコーディングトップページ</dt>
+          <dd>30.000円〜</dd>
+          <dt>HTMLコーディング下層1ページ</dt>
+          <dd>10.000円〜</dd>
+          <dt>HTML+WordPressトップページ</dt>
+          <dd>55.000円〜</dd>
+          <dt>HTML+WordPress下層1ページ</dt>
+          <dd>15.000円〜</dd>
+        </dl>
+        <p>＊詳細な価格はページや仕様によって異なります</p>
+      </div>
+    </section>
+    <!-- //section price -->
+    <!-- section faq -->
+    <section class="l-section p-faq">
+      <div class="c-inner">
+        <div class="c-sectionTitle">
+          <h3 class="c-sectionTitle__title">よくある質問</h3>
+          <p class="c-sectionTitle__en">FAQ</p>
+        </div>
+        <dl class="p-faq__table">
+          <dt>デザインから一貫してお願いすることは可能でしょうか</dt>
+          <dd>ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。 ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。</dd>
+          <dt>WordPressのカスタマイズをお願いすることも可能でしょうか？</dt>
+          <dd>可能です。ただECサイトなどの場合は構築難易度や工数の関係で綿密にヒアリングさせていただきたく思います。</dd>
+          <dt>コーディングのスピード感が知りたい</dt>
+          <dd>HTMLレスポンシブ込み5ページで1週間、10ページで2週間、WordPressサイト5ページで2週間、10ページで3週間が目安になります。</dd> 
+        </dl>
+      </div>
+    </section>
+    <!-- //section faq -->
+    <!-- section blog -->
+    <section class="l-section p-blog">
+      <div class="c-inner">
+        <div class="c-sectionTitle">
+          <h3 class="c-sectionTitle__title">ブログ</h3>
+          <p class="c-sectionTitle__en">BLOG</p>
+        </div>
+        <div class="p-blog__cardUnit">
+          <div class="p-blog__card">
+            <div class="p-blog__cardImg"><img src="./public/img/blog01.png" alt="パソコンが並んだオフィスの写真"></div>
+            <p class="p-blog__cardText">サイトをリニューアルオープンしました。</p>
+            <p class="p-blog__cardDate"><time datetime="2020-01-23">2020.01.23</time></p>
+          </div>
+            <div class="p-blog__cardImg"><img src="./public/img/blog02.png" alt="打ち合わせをする人たちの手元の写真"></div>
+            <p class="p-blog__cardText">WebサイトでSEO内部施策に適したコー ディングでどれぐらいサイトが早くなるのか検証してみました</p>
+            <p class="p-blog__cardDate"><time datetime="2020-01-24">2020.01.24</time></p>
+          </div>
+          <div class="p-blog__cardImg"><img src="./public/img/blog01.png" alt="３人の女性がパソコンを間に談笑する写真"></div>
+            <p class="p-blog__cardText">ユアコーディングではデザイナーの方を広く募集しています。</p>
+            <p class="p-blog__cardDate"><time datetime="2020-01-25">2020.01.25</time></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //section blog -->
+    <!-- section works -->
+    <section class="l-section p-works">
+      <div class="c-inner">
+        <div class="c-sectionTitle">
+          <h3 class="c-sectionTitle__title">制作実績</h3>
+          <p class="c-sectionTitle__en">WORKS</p>
+        </div>
+        <div class="p-works__cardUnit">
+          <div class="p-works__card">
+            <div class="p-works__cardImg"><img src="./public/img/works01.png" alt="タブレットの奥にコーヒーがある写真"></div>
+            <p class="p-works__cardText">株式会社サンプル採用サイトのコーディングを行いました！</p>
+            <p class="p-works__cardInfo">採用技術：jQuery,Bootstrap4<br>実装期間：2週間<br>担当コーダー：石井</p>
+          </div>
+          <div class="p-works__card">
+            <div class="p-works__cardImg"><img src="./public/img/works02.png" alt="白いデスクの上にパソコンや花などがある写真"></div>
+            <p class="p-works__cardText">コーディングカンファレンスのイベントLPの制作を行いました！</p>
+            <p class="p-works__cardInfo">採用技術：jQuery,WordPress<br>実装期間：4週間<br>担当コーダー：石井</p>
+          </div>
+          <div class="p-works__card">
+            <div class="p-works__cardImg"><img src="./public/img/works01.png" alt="タブレットの奥にコーヒーがある写真"></div>
+            <p class="p-works__cardText">株式会社サンプル採用サイトのコーディングを行いました！</p>
+            <p class="p-works__cardInfo">採用技術：jQuery,Bootstrap4<br>実装期間：2週間<br>担当コーダー：石井</p>
+          </div>
+          <div class="p-works__card">
+            <div class="p-works__cardImg"><img src="./public/img/works03.png" alt="手書きのウェブサイトデザイン案の写真"></div>
+            <p class="p-works__cardText">株式会社サンプル様通販サイトのコーディングを行いました！</p>
+            <p class="p-works__cardInfo">採用技術：jQuery,Bootstrap4<br>実装期間：6週間<br>担当コーダー：石井</p>
+          </div>
+          <div class="p-works__card">
+            <div class="p-works__cardImg"><img src="./public/img/works01.png" alt="タブレットの奥にコーヒーがある写真"></div>
+            <p class="p-works__cardText">株式会社サンプル採用サイトのコーディングを行いました！</p>
+            <p class="p-works__cardInfo">採用技術：jQuery,Bootstrap4<br>実装期間：2週間<br>担当コーダー：石井</p>
+          </div>
+      </div>
+    </section>
+    <!-- //section works -->
+    <!-- section contact -->
+    <section class="l-section p-contact">
+      <div class="c-inner">
+        <div class="c-sectionTitle">
+          <h3 class="c-sectionTitle__title">お問い合わせ</h3>
+          <p class="c-sectionTitle__en">CONTACT</p>
+        </div>
+        <p class="p-contact-message">コーディングの人出が足りないとき、あなたの力になります</p>
+        <div class="p-contact__form">
+          <form
+            action="https://docs.google.com/forms/hogehoge~"
+            id="form">
+            <div class="p-contact__item">
+              <label for="name">お名前</label>
+              <input type="text" name="entry.396652" id="name" placeholder="お名前" required>
+            </div>
+            <div class="p-contact__item">
+              <label for="mail">メールアドレス</label>
+              <input type="mail" name="entry.1934980" id="mail" placeholder="メールアドレス" required>
+            </div>
+            <div class="p-contact__item">
+              <label for="mail">お問い合わせ内容</label>
+              <textarea name="entry.181178" id="" cols="30" rows="10" placeholder="自由記述"></textarea>
+            </div>
+            <div>
+              <input type="checkbox" id="agreement" name="agreement">
+              <label for="agreement">プライバシーポリシーに同意する</label>
+            </div>
+            <input type="submit" class="submit-btn">
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- //section contact -->
   </main>
   <!-- //main -->
   <!-- footer -->
   <footer class="l-footer">
     <div class="c-inner">
-      <small></small>
+      <div class="l-footer__logo">ユアコーディング</div>
+      <nav class="l-footer__nav">
+        <ul>
+          <li>プライバシーポリシー</li>
+          <li>個人商取引法に基づく表記</li>
+        </ul>
+      </nav>
+      <small>©ユアコーディング, All Rights Reserved.</small>
     </div>
   </footer>
   <!-- //footer -->
