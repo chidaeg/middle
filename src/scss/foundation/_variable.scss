@@ -11,7 +11,6 @@ $color-font-100: #444444;
 
 $color-navy: #0C449B;
 $color-blue: #3BA6C9;
-
 $color-lightgray-100: #E5E5E5;
 $color-gary: #DDDDDD;
 $color-darkgray: #F2F2F2;
@@ -22,18 +21,39 @@ $color-lightgray: #F8F8F8;
 
 // responsive
 @mixin breakpoint($point) {
-	@if $point == mobile {
-		@media (max-width: 640px) {
+	@if $point == small {
+		@media (max-width: 576px) {
 			@content;
 		}
 	}
-	@if $point == tablet {
-		@media (max-width: 865px) {
+	@if $point == medium {
+		@media (max-width: 768px) {
+			@content;
+		}
+	}
+	@if $point == large {
+		@media (max-width: 992px) {
+			@content;
+		}
+	}
+	@if $point == x-large {
+		@media (max-width: 1200px) {
+			@content;
+		}
+	}
+	@if $point == xx-large {
+		@media (max-width: 1400px) {
 			@content;
 		}
 	}
 }
-@include breakpoint(mobile) {
+@include breakpoint(small) {
 }
-@include breakpoint(tablet) {
+@include breakpoint(medium) {
+}
+@include breakpoint(large) {
+}
+@include breakpoint(x-large) {
+}
+@include breakpoint(xx-large) {
 }

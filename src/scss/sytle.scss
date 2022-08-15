@@ -17,6 +17,8 @@
 * component
 -------------------*/
 @use "./object/component/inner";
+@use "./object/component/btn";
+
 @use "./object/component/info";
 @use "./object/component/sectionTitle";
 @use "./object/component/access";
@@ -24,9 +26,12 @@
 * project
 -------------------*/
 @use "./object/project/fv";
-@use "./object/project/message";
-@use "./object/project/service";
-@use "./object/project/news";
+@use "./object/project/features";
+@use "./object/project/price";
+@use "./object/project/faq";
+@use "./object/project/blog";
+@use "./object/project/works";
+@use "./object/project/contact";
 /*-------------------
 * Utility
 -------------------*/

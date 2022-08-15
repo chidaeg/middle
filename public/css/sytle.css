@@ -1,0 +1,187 @@
+*,
+*:before,
+*:after {
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333333;
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  min-width: 350px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+object {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+}
+
+a {
+  color: #444444;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+a:hover img {
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+
+li {
+  list-style: none;
+}
+
+.l-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  height: 9.4rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.l-header__content {
+  display: flex;
+  padding: 0 2rem;
+  align-items: center;
+  height: 9.4rem;
+}
+.l-header__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 13.7rem;
+  font-size: 2.4rem;
+  line-height: 3.5;
+  font-weight: bold;
+}
+.l-header__logo img {
+  margin-right: 1.6rem;
+}
+.l-header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 25.2rem;
+}
+.l-header .c-btn {
+  margin-left: auto;
+}
+.l-header__spOpen {
+  display: none;
+}
+
+.l-footer {
+  padding: 19.6rem 1.6rem 16.3rem;
+}
+
+.l-section {
+  padding: 0 1.6rem;
+}
+
+.c-inner {
+  max-width: 1022px;
+  margin: 0 auto;
+}
+
+.c-btn {
+  display: block;
+  width: 15.5rem;
+  height: 3.7rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: linear-gradient(to right, #FA41CC, #6020B0);
+  padding: 0.7rem 3.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  text-align: center;
+}
+
+.c-info__hour {
+  font-size: 1.4rem;
+  height: 2rem;
+  margin-bottom: 15px;
+}
+
+.c-sectionTitle {
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 7rem;
+  text-align: center;
+}
+.c-sectionTitle span {
+  display: inline-block;
+}
+
+.c-access__map {
+  flex-basis: 51.5254237288%;
+}
+
+.p-fv {
+  width: 100%;
+}
+
+.p-message__content {
+  display: flex;
+}
+
+.p-news {
+  background-color: #EEFBFB;
+}
+
+.p-service {
+  background-color: #EEFBFB;
+}
+
+.p-service {
+  background-color: #EEFBFB;
+}
+
+.p-service {
+  background-color: #EEFBFB;
+}
+
+.p-service {
+  background-color: #EEFBFB;
+}
+
+.u-undeline {
+  background: linear-gradient(transparent 75%, #99E5A5 75%);
+}
+
+/*--------------------------------------*
+* foundation
+*--------------------------------------*/
+/*--------------------------------------*
+* layout
+*--------------------------------------*/
+/*--------------------------------------*
+* object
+*--------------------------------------*/
+/*-------------------
+* component
+-------------------*/
+/*-------------------
+* project
+-------------------*/
+/*-------------------
+* Utility
+-------------------*//*# sourceMappingURL=sytle.css.map */
