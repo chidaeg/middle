@@ -7,6 +7,7 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0 3.7rem;
     }
     &__content {
@@ -22,5 +23,17 @@
     }
     &__text {
         margin-bottom: 4.5rem;
+    }
+    @include breakpoint(large) {
+        &__wrapper {
+            padding: 0;
+        }
+        &__content {
+            min-width: 35.2rem;
+            padding: 0;
+        }
+        &__img {
+            min-width: 40rem;
+        }
     }
 }

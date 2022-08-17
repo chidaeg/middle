@@ -37,4 +37,19 @@
     &__spOpen {
         display: none;
     }
+    @include breakpoint(large) {
+        &__content {
+            padding: 0;
+            justify-content: space-around;
+        }
+        &__logo {
+            margin-right: 0;
+        }
+        &__nav {
+            width: 20rem;
+        }
+        .c-btn {
+            margin-left: 0;
+        }
+    }
 }

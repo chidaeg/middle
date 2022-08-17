@@ -89,6 +89,21 @@ li {
 .l-header__spOpen {
   display: none;
 }
+@media (max-width: 992px) {
+  .l-header__content {
+    padding: 0;
+    justify-content: space-around;
+  }
+  .l-header__logo {
+    margin-right: 0;
+  }
+  .l-header__nav {
+    width: 20rem;
+  }
+  .l-header .c-btn {
+    margin-left: 0;
+  }
+}
 
 .l-footer {
   background-color: #F8F8F8;
@@ -175,6 +190,7 @@ li {
 .p-fv__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 3.7rem;
 }
 .p-fv__content {
@@ -191,6 +207,18 @@ li {
 .p-fv__text {
   margin-bottom: 4.5rem;
 }
+@media (max-width: 992px) {
+  .p-fv__wrapper {
+    padding: 0;
+  }
+  .p-fv__content {
+    min-width: 35.2rem;
+    padding: 0;
+  }
+  .p-fv__img {
+    min-width: 40rem;
+  }
+}
 
 .p-features {
   padding: 7.1rem 2rem 15.4rem;
@@ -203,85 +231,57 @@ li {
   font-size: 2.8rem;
   line-height: 1.43;
   font-weight: bold;
+  margin-bottom: 4.9rem;
 }
 .p-features__flex {
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 8.6rem;
+  gap: min(10vw, 15.7rem);
+  max-width: 109.6rem;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .p-features__flex {
+    gap: 5vw;
+  }
 }
 .p-features__img img {
   width: 100%;
+  max-width: 38rem;
+}
+@media (max-width: 992px) {
+  .p-features__img img {
+    min-width: 30rem;
+  }
 }
 .p-features__text {
+  margin-top: 4.7rem;
+  width: 50.2rem;
+  margin-bottom: 3.7rem;
   font-weight: bold;
+}
+@media (max-width: 992px) {
+  .p-features__text p br {
+    display: none;
+  }
 }
 .p-features__text p:first-child {
   font-size: 2.4rem;
-}
-.p-features__text p:last-child {
-  line-height: 1.625;
-}
-.p-features__speed .p-features__heading {
-  margin-bottom: 4.9rem;
-}
-.p-features__speed .p-features__flex {
-  margin-bottom: 8.6rem;
-  gap: min(13vw, 15.7rem);
-}
-.p-features__speed .p-features__img {
-  max-width: 38rem;
-}
-.p-features__speed .p-features__text {
-  margin-top: 4.7rem;
-  min-width: 50.2rem;
-  margin-bottom: 3.7rem;
-}
-.p-features__speed .p-features__text p:first-child {
   margin-bottom: 4.5rem;
   line-height: 1.72;
 }
-.p-features__quality .p-features__heading {
-  margin-bottom: 6.1rem;
-}
-.p-features__quality .p-features__flex {
-  gap: min(7vw, 8.4rem);
-  margin-bottom: 13.6rem;
-}
-.p-features__quality .p-features__img {
-  max-width: 47.9rem;
-}
-.p-features__quality .p-features__text {
-  min-width: 44.7rem;
-  margin-bottom: 8rem;
-  padding-left: 2.9rem;
-}
-.p-features__quality .p-features__text p:first-child {
-  margin-bottom: 4rem;
-  line-height: 1.82;
-}
-.p-features__response .p-features__heading {
-  margin-bottom: 6.2rem;
-}
-.p-features__response .p-features__flex {
-  gap: min(14vw, 17.3rem);
-}
-.p-features__response .p-features__img {
-  max-width: 40rem;
-  margin-left: 2.9rem;
-}
-.p-features__response .p-features__text {
-  min-width: 35rem;
-  margin: 2rem 8.7rem 8rem 0;
-}
-.p-features__response .p-features__text p:first-child {
-  margin-bottom: 4rem;
-  line-height: 1.82;
+.p-features__text p:last-child {
+  line-height: 1.625;
 }
 
 .p-price {
   background-color: #EEFBFB;
 }
+.p-price .c-sectionTitle {
+  margin-bottom: 0;
+}
 .p-price__table {
-  width: 92.6rem;
+  max-width: 92.6rem;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -290,6 +290,11 @@ li {
   line-height: 1.75;
   margin-bottom: 3.6rem;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+@media (max-width: 992px) {
+  .p-price__table {
+    width: 85vw;
+  }
 }
 .p-price__table dd, .p-price__table dt {
   padding: 3.5rem 0;
@@ -324,7 +329,7 @@ li {
   font-weight: bold;
   font-size: 1.4rem;
   line-height: 1.8;
-  width: 90.7rem;
+  max-width: 90.7rem;
   margin: 0 auto;
 }
 .p-faq__table dt, .p-faq__table dd {
@@ -338,6 +343,11 @@ li {
   background-color: #F2F2F2;
   padding: 2.3rem 8.7rem 2.3rem 3.5rem;
   color: #444444;
+}
+@media (max-width: 992px) {
+  .p-faq__table dd {
+    padding: 2.3rem 3.5rem;
+  }
 }
 
 .p-blog {
@@ -426,7 +436,7 @@ li {
   margin-bottom: 4.4rem;
 }
 .p-contact__form {
-  width: 90.8rem;
+  max-width: 90.8rem;
   background-color: #fff;
   margin: 0 auto;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
@@ -453,14 +463,16 @@ li {
 .p-contact__item input {
   margin-bottom: 2.7rem;
   background: #EEFBFB;
-  width: 49.9rem;
+  max-width: 49.9rem;
+  width: 100%;
   height: 4.3rem;
   border-radius: 3px;
 }
 .p-contact__item textarea {
   background: #EEFBFB;
   border-radius: 3px;
-  width: 78.3rem;
+  max-width: 78.3rem;
+  width: 100%;
   height: 17.9rem;
   margin-bottom: 2.7rem;
 }

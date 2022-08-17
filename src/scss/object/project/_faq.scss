@@ -10,7 +10,7 @@
         font-weight: bold;
         font-size: 1.4rem;
         line-height: 1.8;
-        width: 90.7rem;
+        max-width: 90.7rem;
         margin: 0 auto;
         & dt,
         & dd {
@@ -25,6 +25,9 @@
             padding: 2.3rem 8.7rem 2.3rem 3.5rem;
             color: $color-font-100;
             // display: none;
+            @include breakpoint(large) {
+                padding: 2.3rem 3.5rem;
+            }
         }
     }
 

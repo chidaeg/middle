@@ -2,8 +2,14 @@
 
 .p-price {
     background-color: $color-main;
+    .c-sectionTitle {
+        margin-bottom: 0;
+    }
     &__table {
-        width: 92.6rem;
+        @include breakpoint(large) {
+            width: 85vw;
+        }
+        max-width: 92.6rem;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
