@@ -2,9 +2,11 @@
 
 .c-btn {
     display: block;
-    width: 15.5rem;
+    min-width: 15.5rem;
     height: 3.7rem;
     font-size: 1.4rem;
+    line-height: 1.43;
+    font-weight: bold;
     color: $color-base;
     background: linear-gradient(to right, $color-btnPink, $color-btnPurple);
     padding: 0.7rem 3.5rem 1rem;

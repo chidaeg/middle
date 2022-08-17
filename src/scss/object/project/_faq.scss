@@ -1,5 +1,31 @@
 @use '../../foundation/_variable' as *;
 
-.p-service {
-    background-color: $color-main;
+.p-faq {
+    padding-top: 5.5rem;
+    padding-bottom: 8.6rem;
+    .c-sectionTitle {
+        margin-bottom: 3.2rem;
+    }
+    &__table {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 1.8;
+        width: 90.7rem;
+        margin: 0 auto;
+        & dt,
+        & dd {
+            border: 1px solid $color-lightgray-100;
+        }
+        & dt {
+            text-align: center;
+            line-height: 5.8rem;
+        }
+        & dd {
+            background-color: $color-darkgray;
+            padding: 2.3rem 8.7rem 2.3rem 3.5rem;
+            color: $color-font-100;
+            // display: none;
+        }
+    }
+
 }

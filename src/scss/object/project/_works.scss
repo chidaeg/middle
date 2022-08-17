@@ -1,5 +1,35 @@
 @use '../../foundation/_variable' as *;
 
-.p-service {
-    background-color: $color-main;
+.p-works {
+    .c-inner {
+        max-width: 150%;
+    }
+    & .c-sectionTitle {
+        margin-bottom: 6.8rem;
+    }
+    &__cardUnit {
+        display: flex;
+        justify-content: space-between;
+        width: 144%;
+        padding-bottom: 9rem;
+    }
+    &__card {
+        min-width: 32.4rem;
+        margin-right: 5.6rem;
+        border: 1px solid $color-gary;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+    &__cardText {
+        padding: 1.8rem;
+    }
+    &__cardHeading {
+        margin-bottom: 3rem;
+        line-height: 1.5;
+    }
+    &__cardDetail {
+        font-size: 1.4rem;
+        line-height: 1.43;
+        margin-bottom: 4rem;
+    }
 }

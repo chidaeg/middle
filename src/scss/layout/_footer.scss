@@ -1,5 +1,27 @@
 @use '../foundation/_variable' as *;
 
 .l-footer {
-    padding: 19.6rem 1.6rem 16.3rem;
+    background-color: $color-lightgray;
+    &__content {
+        padding: 4.3rem 2rem 4.9rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    &__logo {
+        font-size: 2.4rem;
+        line-height: 1.46;
+        margin-bottom: 2.1rem;
+    }
+    &__nav ul {
+        display: flex;
+        gap: 2.9rem;
+        justify-content: center;
+        margin-bottom: 5.2rem;
+        line-height: 1.5;
+    }
+    small {
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.43;
+    }
 }

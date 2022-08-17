@@ -1,12 +1,18 @@
 @use '../../foundation/_variable' as *;
 
 .c-sectionTitle {
-    font-size: 2.4rem;
-    line-height: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 7rem;
     text-align: center;
-    span {
-        display: inline-block;
+    margin-bottom: 5rem;
+    &__title {
+        font-size: 3.2rem;
+        line-height: 1.44;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    &__en {
+        font-size: 1.6rem;
+        color: $color-blue;
+        font-weight: bold;
     }
 }

@@ -1,5 +1,109 @@
 @use '../../foundation/_variable' as *;
 
-.p-service {
-    background-color: $color-main;
+.p-contact {
+    background: linear-gradient(to right, $color-linearRight, $color-linearMiddle 80%, $color-linearLeft);
+    padding-bottom: 7rem;
+    & .c-sectionTitle {
+        margin-bottom: 3.6rem;
+        &__title,
+        &__en {
+            color: $color-base;
+        }
+    }
+    &__message {
+        color: $color-base;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 4.4rem;
+    }
+    &__form {
+        width: 90.8rem;
+        background-color: $color-base;
+        margin: 0 auto;
+        box-shadow: 0px 3px 6px $color-boxshadow;
+        font-weight: bold;
+        padding: 3.5rem 6.2rem
+    }
+    &__item {
+        label{
+            display: block;
+            margin-bottom: 3.9rem;
+            &::after {
+                content: "必須";
+                display: inline-block;
+                text-align: center;
+                width: 6rem;
+                height: 3rem;
+                margin-left: 2rem;
+                font-size: 1.4rem;
+                line-height: 1.85;
+                color: $color-base;
+                background-color: $color-navy;
+                border-radius: 10px;
+            }
+
+
+
+            
+            
+            
+            
+            
+        }
+        input {
+            margin-bottom: 2.7rem;
+            background: $color-main;
+            width: 49.9rem;
+            height: 4.3rem;
+            border-radius: 3px;
+        }
+        textarea {
+            background: $color-main;
+            border-radius: 3px;
+            width: 78.3rem;
+            height: 17.9rem;
+            margin-bottom: 2.7rem;
+        }
+    }
+    &__agreement {
+        text-align: center;
+        margin-bottom: 3rem;
+        input[type=checkbox] {
+            display: none;
+        }
+        label {
+            position: relative; 
+            padding: 0 0 0 1rem;
+            &:after,
+            &:before{
+                position: absolute;
+                content: "";
+                display: block;
+                top: 50%;
+            }
+            &:after {
+                left: -20px;
+                margin-top: -10px;
+                width: 20px;
+                height: 20px;
+                border: 2px solid $color-checkbox;
+            }
+            &:before {
+                left: -14px;
+                margin-top: -7px;
+                width: 8px;
+                height: 12px;
+                border-right: 3px solid $color-navy;
+                border-bottom: 3px solid $color-navy;
+                transform: rotate(45deg);
+                opacity: 0;
+            }
+        }
+            input[type=checkbox]:checked + label:before {
+            opacity: 1;
+            }
+    }
+    .c-btn {
+        margin: 0 auto;
+    }
 }

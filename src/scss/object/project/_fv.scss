@@ -2,4 +2,25 @@
 
 .p-fv {
     width: 100%;
+    padding: 13.1rem 2rem 11.3rem;
+    background: url("../../../../public/img/top_bg.svg") right -50px top -100px / 50% no-repeat;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3.7rem;
+    }
+    &__content {
+        font-weight: bold;
+        padding-left: 2rem;
+        min-width: 37.2rem;
+    }
+    &__title {
+        font-size: 3.2rem;
+        line-height: 1.44;
+        font-weight: bold;
+        margin: 2.8rem 0 4.4rem;
+    }
+    &__text {
+        margin-bottom: 4.5rem;
+    }
 }
