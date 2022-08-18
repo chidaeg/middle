@@ -11,6 +11,9 @@
         gap: 3rem;
         grid-template-columns: repeat(auto-fit, 38.9rem);
         justify-content: center;
+        @include breakpoint(small) {
+            display: block;
+        }
     }
     &__card {
         min-width: 38.9rem;
@@ -20,11 +23,20 @@
         box-shadow: 0px 3px 6px $color-boxshadow;
         font-weight: bold;
         position: relative;
+        @include breakpoint(small) {
+            width: 100%;
+            max-width: 38.9rem;
+            margin: 0 auto 3rem;
+            min-width: 25rem;
+        }
     }
     &__cardText {
         padding: 1.4rem 0 0 1.8rem;
         font-size: 1.8rem;
         line-height: 1.44;
+        @include breakpoint(small) {
+            padding: 1.4rem 1.8rem 0;
+        }
     }
     &__cardDate {
         display: inline-block;

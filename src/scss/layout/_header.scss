@@ -36,6 +36,28 @@
     }
     &__spOpen {
         display: none;
+        width: 4rem;
+        height: 3.2rem;
+        position: relative;
+        & span {
+            position: absolute;
+            display: block;
+            width: 4rem;
+            height: 0.4rem;
+            background: $color-font;
+            left: 0;
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(3) {
+                top: 100%;
+                transform: translateY(-100%);
+            }
+        }
     }
     @include breakpoint(large) {
         &__content {
@@ -50,6 +72,19 @@
         }
         .c-btn {
             margin-left: 0;
+        }
+    }
+    @include breakpoint(medium) {
+        &__nav {
+            display: none;
+        }
+        &__spOpen {
+            display: block;
+        }
+    }
+    @include breakpoint(small) {
+        .c-btn {
+            display: none;
         }
     }
 }

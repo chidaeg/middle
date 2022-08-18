@@ -18,7 +18,16 @@
         }
         & dt {
             text-align: center;
-            line-height: 5.8rem;
+            height: 5.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.6rem;
+            @include breakpoint(small) {
+                min-height: 5.8rem;
+                height: auto;
+            }
+
         }
         & dd {
             background-color: $color-darkgray;
@@ -27,6 +36,9 @@
             // display: none;
             @include breakpoint(large) {
                 padding: 2.3rem 3.5rem;
+            }
+            @include breakpoint(small) {
+                padding: 2.3rem 2.4rem;
             }
         }
     }

@@ -3,7 +3,7 @@
 .p-price {
     background-color: $color-main;
     .c-sectionTitle {
-        margin-bottom: 0;
+        margin-bottom: 7rem;
     }
     &__table {
         @include breakpoint(large) {
@@ -22,6 +22,9 @@
         & dt {
             padding: 3.5rem 0;
             border-bottom: 1px solid $color-lightgray-100;
+            @include breakpoint(small) {
+                padding: 2rem 0;
+            }
             &:nth-child(7),
             &:last-child {
                 border-bottom: none;
@@ -31,13 +34,27 @@
             width: 29rem;
             border-right: 1px solid $color-lightgray-100;
             padding-left: 1.9rem;
+            @include breakpoint(small) {
+                width: 17rem;
+                padding-left: 1.6rem;
+            }
+            br {
+                display: none;
+                @include breakpoint(small) {
+                    display: block;
+                }
+            }
         }        
         & dd {
             width: calc( 100% - 29rem );
             padding-left: 3rem;
+            line-height: 5.6rem;
+            @include breakpoint(small) {
+                width: calc( 100% - 17rem );
+            }
         }
     }
-    p {
+    .p-price__caution {
         text-align: center;
         padding-bottom: 6.8rem;
         color: $color-font-100;

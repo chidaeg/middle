@@ -2,6 +2,9 @@
 
 .p-features {
     padding: 7.1rem 2rem 15.4rem;
+    @include breakpoint(large) {
+        padding-bottom: 5rem;
+    }
     .c-sectionTitle {
         margin-bottom: 5.7rem;
     }
@@ -14,14 +17,19 @@
     }
     &__flex {
         display: flex;
-        // justify-content: space-between;
         margin-bottom: 8.6rem;
         gap: min(10vw, 15.7rem);
+        max-width: 109.6rem;
+        width: 100%;
+        &:last-child {
+            margin-bottom: 0;
+        }
         @include breakpoint(large) {
             gap: 5vw;  
         }
-        max-width: 109.6rem;
-        width: 100%;
+        @include breakpoint(medium) {
+            display: block;
+        }
     }
     &__img img{
         width: 100%;
@@ -29,24 +37,40 @@
         @include breakpoint(large) {
             min-width: 30rem;
         }
+        @include breakpoint(medium) {
+            margin: 0 auto;
+        }
     }
     &__text {
-        margin-top: 4.7rem;
+        margin: 4.7rem 0 3.7rem ;
         width: 50.2rem;
         margin-bottom: 3.7rem;
         font-weight: bold;
         @include breakpoint(large) {    
             & p br {
                 display: none;
+            }
         }
+        @include breakpoint(medium) {
+            margin: 3rem auto 8rem;
+        }
+        @include breakpoint(small) {
+            width: 100%;
         }
         & p:first-child {
             font-size: 2.4rem;
             margin-bottom: 4.5rem;
             line-height: 1.72;
+            @include breakpoint(medium) {
+                margin-bottom: 3rem;
+            }
         }
         & p:last-child {
             line-height: 1.625;
+            @include breakpoint(small) {
+                width: 90%;
+                margin: 0 auto;
+            }
         }
     }
     // &__speed {
