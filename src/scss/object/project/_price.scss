@@ -34,6 +34,8 @@
             width: 29rem;
             border-right: 1px solid $color-lightgray-100;
             padding-left: 1.9rem;
+            display: flex;
+            align-items: center;
             @include breakpoint(small) {
                 width: 17rem;
                 padding-left: 1.6rem;

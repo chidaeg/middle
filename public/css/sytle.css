@@ -188,7 +188,7 @@ li {
 
 .c-btn {
   display: block;
-  min-width: 15.5rem;
+  width: 15.5rem;
   height: 3.7rem;
   font-size: 1.4rem;
   line-height: 1.43;
@@ -285,7 +285,7 @@ li {
 .p-fv__text {
   margin-bottom: 4.5rem;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .p-fv .c-btn {
     margin: 0 auto 4rem;
   }
@@ -444,6 +444,8 @@ li {
   width: 29rem;
   border-right: 1px solid #E5E5E5;
   padding-left: 1.9rem;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 576px) {
   .p-price__table dt {
@@ -499,6 +501,11 @@ li {
   justify-content: center;
   align-items: center;
   padding: 1.6rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 @media (max-width: 576px) {
   .p-faq__table dt {
@@ -508,18 +515,10 @@ li {
 }
 .p-faq__table dd {
   background-color: #F2F2F2;
-  padding: 2.3rem 8.7rem 2.3rem 3.5rem;
   color: #444444;
-}
-@media (max-width: 992px) {
-  .p-faq__table dd {
-    padding: 2.3rem 3.5rem;
-  }
-}
-@media (max-width: 576px) {
-  .p-faq__table dd {
-    padding: 2.3rem 2.4rem;
-  }
+  visibility: hidden;
+  max-height: 0;
+  border: none;
 }
 
 .p-blog {
@@ -577,8 +576,21 @@ li {
   color: #444444;
 }
 
+.p-works.l-section {
+  padding: 5.5rem 2rem 9rem;
+}
 .p-works .c-inner {
-  max-width: 150%;
+  max-width: 108rem;
+}
+@media (max-width: 992px) {
+  .p-works .c-inner {
+    max-width: 67rem;
+  }
+}
+@media (max-width: 768px) {
+  .p-works .c-inner {
+    max-width: 32rem;
+  }
 }
 .p-works .c-sectionTitle {
   margin-bottom: 6.8rem;
@@ -586,12 +598,8 @@ li {
 .p-works__cardUnit {
   display: flex;
   justify-content: space-between;
-  width: 144%;
-  padding-bottom: 9rem;
 }
 .p-works__card {
-  min-width: 32.4rem;
-  margin-right: 5.6rem;
   border: 1px solid #DDDDDD;
   border-radius: 8px;
   font-weight: bold;
@@ -733,6 +741,40 @@ li {
   flex-direction: row-reverse;
 }
 
+.p-faq .js-accordion__active {
+  visibility: inherit;
+  max-height: 50rem;
+  transition: visibility 0.3s, max-height 0.3s;
+  padding: 2.3rem 8.7rem 2.3rem 3.5rem;
+}
+@media (max-width: 992px) {
+  .p-faq .js-accordion__active {
+    padding: 2.3rem 3.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .p-faq .js-accordion__active {
+    padding: 2.3rem 2.4rem;
+  }
+}
+
+.js-scroll__target {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+}
+
+.js-scroll__target.is-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 1s;
+}
+
+.swiper {
+  width: 100%;
+  height: 40.7rem;
+  overflow: visible;
+}
+
 /*--------------------------------------*
 * foundation
 *--------------------------------------*/
@@ -750,4 +792,7 @@ li {
 -------------------*/
 /*-------------------
 * Utility
+-------------------*/
+/*-------------------
+* Program
 -------------------*//*# sourceMappingURL=sytle.css.map */

@@ -1,8 +1,17 @@
 @use '../../foundation/_variable' as *;
 
 .p-works {
-    .c-inner {
-        max-width: 150%;
+    &.l-section {
+        padding: 5.5rem 2rem 9rem;
+    }
+    & .c-inner {
+        max-width: 108rem;
+        @include breakpoint(large) {
+            max-width: 67rem;
+        }
+        @include breakpoint(medium) {
+            max-width: 32rem;
+        }
     }
     & .c-sectionTitle {
         margin-bottom: 6.8rem;
@@ -10,12 +19,8 @@
     &__cardUnit {
         display: flex;
         justify-content: space-between;
-        width: 144%;
-        padding-bottom: 9rem;
     }
     &__card {
-        min-width: 32.4rem;
-        margin-right: 5.6rem;
         border: 1px solid $color-gary;
         border-radius: 8px;
         font-weight: bold;

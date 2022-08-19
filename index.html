@@ -12,8 +12,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <!-- swiper css-->
+  <link rel="stylesheet" href="./public/css/swiper.min.css">
   <!-- original css -->
   <link rel="stylesheet" href="./public/css/sytle.css">
+  <!-- original js -->
+  <script type='text/javascript' defer src='./public/js/main.js'></script>
   <title>ユアコーディング</title>
 </head>
 <body>
@@ -32,7 +36,7 @@
           <li class="l-header__navItem"><a href="#price">価格</a></li>
           <li class="l-header__navItem"><a href="#contact">お問い合わせ</a></li>
         </ul>
-        <button class="c-btn">お問い合わせ</button>
+        <a href="#contact" class="c-btn">お問い合わせ</a>
         <button class="l-header__spOpen">
           <span></span>
           <span></span>
@@ -45,13 +49,13 @@
   <!-- main -->
   <main class="main">
     <!-- section fv -->
-    <section class="p-fv">
+    <section class="p-fv js-scroll__target">
       <div class="c-inner">
         <div class="p-fv__wrapper">
           <div class="p-fv__content">
             <h2 class="p-fv__title">コーディングの手間を<br>最小に、デザインに注力<br>する助けに</h2>
             <p class="p-fv__text">ユアコーディングはコーディングに<br>特化したフリーランス<br>デザインに注力されたい方の<br>助けになります</p>
-            <button class="c-btn">お問い合わせ</button>
+            <a href="#contact" class="c-btn">お問い合わせ</a>
           </div>
             <div class="p-fv__img"><img src="./public/img/top.png" alt="PCに向かって忙しく作業する男性のイラスト" width="518"></div>
         </div>
@@ -59,7 +63,7 @@
     </section>
     <!-- //section fv -->
     <!-- section features -->
-    <section class="l-section p-features" id="features">
+    <section class="l-section p-features js-scroll__target" id="features">
       <div class="c-inner">
         <div class="c-sectionTitle">
           <h3 class="c-sectionTitle__title">ユアコーディング3つの特徴</h3>
@@ -99,7 +103,7 @@
     </section>
     <!-- //section feature -->
     <!-- section price -->
-    <section class="l-section p-price" id="price">
+    <section class="l-section p-price js-scroll__target" id="price">
       <div class="c-inner">
         <div class="c-sectionTitle">
           <h3 class="c-sectionTitle__title">価格</h3>
@@ -120,25 +124,25 @@
     </section>
     <!-- //section price -->
     <!-- section faq -->
-    <section class="l-section p-faq">
+    <section class="l-section p-faq js-scroll__target">
       <div class="c-inner">
         <div class="c-sectionTitle">
           <h3 class="c-sectionTitle__title">よくある質問</h3>
           <p class="c-sectionTitle__en">FAQ</p>
         </div>
-        <dl class="p-faq__table">
-          <dt>デザインから一貫してお願いすることは可能でしょうか</dt>
-          <dd>ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。<br>ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。</dd>
-          <dt>WordPressのカスタマイズをお願いすることも可能でしょうか？</dt>
-          <dd>可能です。ただECサイトなどの場合は構築難易度や工数の関係で綿密にヒアリングさせていただきたく思います。</dd>
-          <dt>コーディングのスピード感が知りたい</dt>
-          <dd>HTMLレスポンシブ込み5ページで1週間、10ページで2週間、WordPressサイト5ページで2週間、10ページで3週間が目安になります。</dd> 
+        <dl class="p-faq__table js-accordion">
+          <dt class="js-accordion__trigger">デザインから一貫してお願いすることは可能でしょうか</dt>
+          <dd class="js-accordion__content js-accordion__active">ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。<br>ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。</dd>
+          <dt class="js-accordion__trigger">WordPressのカスタマイズをお願いすることも可能でしょうか？</dt>
+          <dd class="js-accordion__content">可能です。ただECサイトなどの場合は構築難易度や工数の関係で綿密にヒアリングさせていただきたく思います。</dd>
+          <dt class="js-accordion__trigger">コーディングのスピード感が知りたい</dt>
+          <dd class="js-accordion__content">HTMLレスポンシブ込み5ページで1週間、10ページで2週間、WordPressサイト5ページで2週間、10ページで3週間が目安になります。</dd> 
         </dl>
       </div>
     </section>
     <!-- //section faq -->
     <!-- section blog -->
-    <section class="l-section p-blog">
+    <section class="l-section p-blog js-scroll__target">
       <div class="c-inner">
         <div class="c-sectionTitle">
           <h3 class="c-sectionTitle__title">ブログ</h3>
@@ -171,23 +175,24 @@
     </section>
     <!-- //section blog -->
     <!-- section works -->
-    <section class="l-section p-works">
+    <section class="l-section p-works js-scroll__target">
       <div class="c-inner">
         <div class="c-sectionTitle">
           <h3 class="c-sectionTitle__title">制作実績</h3>
           <p class="c-sectionTitle__en">WORKS</p>
         </div>
-        <ul class="p-works__cardUnit">
-          <li class="p-works__card">
-            <a href="#">
-              <div class="p-works__cardImg"><img src="./public/img/works01.png" alt="タブレットの奥にコーヒーがある写真" width="322"></div>
-              <div class="p-works__cardText">
+        <div class="swiper">
+          <ul class="p-works__cardUnit swiper-wrapper">
+            <li class="p-works__card swiper-slide">
+              <a href="#">
+                <div class="p-works__cardImg"><img src="./public/img/works01.png" alt="タブレットの奥にコーヒーがある写真" width="322"></div>
+                <div class="p-works__cardText">
                 <p class="p-works__cardHeading">株式会社サンプル採用サイトのコーディングを行いました！</p>
                 <p class="p-works__cardDe&tail">採用技術：jQuery,Bootstrap4<br>実装期間：2週間<br>担当コーダー：</p>
               </div>
             </a>
           </li>
-          <li class="p-works__card">
+          <li class="p-works__card swiper-slide">
             <a href="#">
               <div class="p-works__cardImg"><img src="./public/img/works02.png" alt="白いデスクの上にパソコンや花などがある写真" width="322"></div>
               <div class="p-works__cardText">
@@ -196,7 +201,7 @@
               </div>
             </a>
           </li>
-          <li class="p-works__card">
+          <li class="p-works__card swiper-slide">
             <a href="#">
               <div class="p-works__cardImg"><img src="./public/img/works01.png" alt="タブレットの奥にコーヒーがある写真" width="322"></div>
               <div class="p-works__cardText">
@@ -205,7 +210,7 @@
               </div>
             </a>
           </li>
-          <li class="p-works__card">
+          <li class="p-works__card swiper-slide">
             <a href="#">
               <div class="p-works__cardImg"><img src="./public/img/works03.png" alt="手書きのウェブサイトデザイン案の写真" width="322"></div>
               <div class="p-works__cardText">
@@ -214,7 +219,7 @@
               </div>
             </a>
           </li>
-          <li class="p-works__card">
+          <li class="p-works__card swiper-slide">
             <a href="#">
               <div class="p-works__cardImg"><img src="./public/img/works01.png" alt="タブレットの奥にコーヒーがある写真" width="322"></div>
               <div class="p-works__cardText">
@@ -223,11 +228,12 @@
               </div>
             </a>
           </li>
-      </ul>
+        </ul>
+      </div>
     </section>
     <!-- //section works -->
     <!-- section contact -->
-    <section class="l-section p-contact" id="contact">
+    <section class="l-section p-contact js-scroll__target" id="contact">
       <div class="c-inner">
         <div class="c-sectionTitle">
           <h3 class="c-sectionTitle__title">お問い合わせ</h3>
@@ -278,5 +284,7 @@
     </div>
   </footer>
   <!-- //footer -->
+  <!-- swiper js -->
+  <script src="./public/js/swiper-bundle.min.js"></script>
 </body>
 </html>

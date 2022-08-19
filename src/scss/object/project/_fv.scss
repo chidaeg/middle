@@ -27,7 +27,6 @@
         }
         @include breakpoint(small) {
             min-width: 30rem;
-            
         }
     }
     &__title {
@@ -43,7 +42,7 @@
         margin-bottom: 4.5rem;
     }
     & .c-btn {
-        @include breakpoint(large) {
+        @include breakpoint(medium) {
             margin: 0 auto 4rem ;
         }
     }
@@ -65,9 +64,6 @@
     @include breakpoint(large) {
         &__wrapper {
             padding: 0;
-        }
-        &__content {
-
         }
     }
 }

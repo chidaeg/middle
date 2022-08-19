@@ -23,23 +23,19 @@
             justify-content: center;
             align-items: center;
             padding: 1.6rem;
+            user-select: none;
+            cursor: pointer;
             @include breakpoint(small) {
                 min-height: 5.8rem;
                 height: auto;
             }
-
         }
         & dd {
             background-color: $color-darkgray;
-            padding: 2.3rem 8.7rem 2.3rem 3.5rem;
             color: $color-font-100;
-            // display: none;
-            @include breakpoint(large) {
-                padding: 2.3rem 3.5rem;
-            }
-            @include breakpoint(small) {
-                padding: 2.3rem 2.4rem;
-            }
+            visibility: hidden;
+            max-height: 0;
+            border: none;
         }
     }
 
