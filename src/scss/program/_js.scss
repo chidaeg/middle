@@ -33,3 +33,17 @@
     height: 40.7rem;
     overflow: visible;
 }
+
+// contact form
+.js-error {
+    width : 100%;
+    padding: 0;
+    display: inline-block;
+    font-size: 90%;
+    color: red;
+}
+.js-disabled {
+    opacity: .5;
+    pointer-events: none;
+    background: $color-checkbox;
+}

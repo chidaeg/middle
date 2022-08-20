@@ -31,17 +31,20 @@
             <h1>ユアコーディング</h1>
           </div>
         </a>
-        <ul class="l-header__nav">
-          <li class="l-header__navItem"><a href="#features">特徴</a></li>
-          <li class="l-header__navItem"><a href="#price">価格</a></li>
-          <li class="l-header__navItem"><a href="#contact">お問い合わせ</a></li>
-        </ul>
-        <a href="#contact" class="c-btn">お問い合わせ</a>
-        <button class="l-header__spOpen">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="l-header__navWrapper" id="js-nav">
+          <ul class="l-header__nav">
+            <li class="l-header__navItem"><a href="#features">特徴</a></li>
+            <li class="l-header__navItem"><a href="#price">価格</a></li>
+            <li class="l-header__navItem"><a href="#contact">お問い合わせ</a></li>
+          </ul>
+          <a href="#contact" class="c-btn">お問い合わせ</a>
+          <button class="l-header__spOpen js-menu__spOpen" id="js-spOpen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="l-header__blackBg" id="js-blackBg"></div>
+        </div>
       </div>
     </div>
   </header>
@@ -243,24 +246,24 @@
         <div class="p-contact__form">
           <form
             action="https://docs.google.com/forms/hogehoge~"
-            id="form">
+            id="form" class="js-validation">
             <div class="p-contact__item">
               <label for="name">お名前</label>
-              <input type="text" name="entry.396652" id="name" placeholder="" required>
+              <input type="text" name="entry.396652" id="name" placeholder="お名前" class="js-required">
             </div>
             <div class="p-contact__item">
               <label for="mail">メールアドレス</label>
-              <input type="mail" name="entry.1934980" id="mail" placeholder="" required>
+              <input type="mail" name="entry.1934980" id="mail" placeholder="メールアドレス" class="js-required">
             </div>
             <div class="p-contact__item">
               <label for="mail">お問い合わせ内容</label>
-              <textarea name="entry.181178" id="" cols="30" rows="10" placeholder=""></textarea>
+              <textarea name="entry.181178" id="" cols="30" rows="10" placeholder="お問い合わせ内容" class="js-required"></textarea>
             </div>
             <div class="p-contact__agreement">
-              <input type="checkbox" id="agreement" name="agreement">
+              <input type="checkbox" id="agreement" name="agreement" class="js-required">
               <label for="agreement">プライバシーポリシーに同意する</label>
             </div>
-            <input type="submit" class="c-btn" value="送信する">
+            <input type="submit" class="c-btn js-disabled" value="送信する" id="js-submit">
           </form>
         </div>
       </div>

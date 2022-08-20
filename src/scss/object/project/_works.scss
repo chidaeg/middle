@@ -7,9 +7,6 @@
     & .c-inner {
         max-width: 108rem;
         @include breakpoint(large) {
-            max-width: 67rem;
-        }
-        @include breakpoint(medium) {
             max-width: 32rem;
         }
     }

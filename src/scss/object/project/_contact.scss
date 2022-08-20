@@ -28,6 +28,7 @@
         }
     }
     &__item {
+        padding-bottom: 2.7rem;
         label{
             display: block;
             margin-bottom: 3.9rem;
@@ -49,13 +50,13 @@
             }
         }
         input {
-            margin-bottom: 2.7rem;
             background: $color-main;
             max-width: 49.9rem;
             width: 100%;
             height: 4.3rem;
             border-radius: 3px;
-            padding-left: 1em;
+            padding: 1em;
+            font-weight: normal;
             @include breakpoint(small) {
                 margin-bottom: 3.6rem;
             }
@@ -66,7 +67,8 @@
             max-width: 78.3rem;
             width: 100%;
             height: 17.9rem;
-            margin-bottom: 2.7rem;
+            padding: 1em;
+            font-weight: normal;
         }
     }
     &__agreement {

@@ -7,16 +7,20 @@
         max-width: 1227px;
     }
     &__cardUnit {
-        display: grid;
+        display: flex;
         gap: 3rem;
-        grid-template-columns: repeat(auto-fit, 38.9rem);
         justify-content: center;
-        @include breakpoint(small) {
-            display: block;
+        @include breakpoint(large) {
+            gap: 2rem;
+        }
+        @include breakpoint(medium) {
+            flex-direction: column;
+            align-items: center;
         }
     }
     &__card {
-        min-width: 38.9rem;
+        max-width: 38.9rem;
+        min-width: 20rem;
         width: 38.9rem;
         height: 38.7rem;
         background-color: $color-base;
@@ -34,7 +38,7 @@
         padding: 1.4rem 0 0 1.8rem;
         font-size: 1.8rem;
         line-height: 1.44;
-        @include breakpoint(small) {
+        @include breakpoint(large) {
             padding: 1.4rem 1.8rem 0;
         }
     }

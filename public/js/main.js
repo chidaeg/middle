@@ -4,39 +4,27 @@
 // スムーススクロール
 // --------------------
 const anchors = document.querySelectorAll('a[href^="#"]'); 
-const header = document.querySelector('header').offsetHeight; //header高さ
-const urlHash = location.hash; // URLのアンカー（#以降の部分）を取得
+const header = document.querySelector('header').offsetHeight;
+const urlHash = location.hash;
 
-// 各 anchor にクリックイベント
 for ( let i = 0; i < anchors.length; i++ ) {
     anchors[i].addEventListener('click', (e) => {
-        e.preventDefault();  //デフォルトのクリックイベント無効化
-
-    // 各 anchor の href属性取得
+        e.preventDefault();
     const href= anchors[i].getAttribute("href");
 
-    // topに戻る以外のアンカー
     if (href !== '#') {
-
-        // スクロール先の要素を取得 （アンカーの リンク先 #.. の # を取り除いた名前と一致する id名の要素）
         const target = document.getElementById(href.replace('#', ''));
-
-        // スクロール先の要素の位置を取得
-        // header の高さ引く
         const position = window.pageYOffset + target.getBoundingClientRect().top - header;
 
-        // スクロールアニメーション
         window.scroll({
-            top: position,      // スクロール先要素の左上までスクロール
-            behavior: 'smooth'  // スクロールアニメーション
+            top: position, 
+            behavior: 'smooth' 
         });
 
-        // topに戻る
         } else {
-            // スクロールアニメーション
             window.scroll({
-                top: 0,  // スクロール先
-                behavior: 'smooth'    // スクロールアニメーション
+                top: 0,
+                behavior: 'smooth' 
             });
 
         }
@@ -104,7 +92,7 @@ const swiper = new Swiper('.swiper', {
 
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 56,
         },
         992: {
@@ -113,3 +101,75 @@ const swiper = new Swiper('.swiper', {
         }
     },
 });
+// --------------------
+// hamburger
+// --------------------
+
+const spOpen = document.getElementById('js-spOpen');
+const nav = document.getElementById('js-nav');
+const blackBg = document.getElementById('js-blackBg');
+const links = document.querySelectorAll('#js-nav a');
+
+spOpen.addEventListener('click', () => {
+    nav.classList.toggle('is-active');
+});
+blackBg.addEventListener('click', () => {
+    nav.classList.remove('is-active');
+});
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('is-active');
+    });
+});
+
+// --------------------------------
+// 問い合わせフォームの入力チェック
+// --------------------------------
+const validationForm = document.querySelector('.js-validation');
+if(validationForm) {
+    const errorClassName = 'js-error';
+    const requiredElems = document.querySelectorAll('.js-required');
+    const createError = (elem, errorMessage) => {
+        const errorSpan = document.createElement('span');
+        errorSpan.classList.add(errorClassName);
+        errorSpan.textContent = errorMessage;
+        elem.parentNode.appendChild(errorSpan);
+    }
+    const privacyCheck = document.getElementById('agreement');
+    const submit = document.getElementById('js-submit');
+
+    requiredElems.forEach( (elem) => {
+        elem.addEventListener('change', () => {
+        const elemValue = elem.value.trim(); 
+        if(
+            elemValue.length !== 0 &&
+            //プライバシーチェックがチェックありなら
+            privacyCheck.checked === true
+            ) {
+                //submitボタンをdisableしない
+                submit.disabled = false;
+                submit.classList.remove('js-disabled');
+            } else {
+                //submitボタンをdisable
+                submit.disabled = true;
+                submit.classList.add('js-disabled');
+            }
+        });
+    });
+                
+    validationForm.addEventListener('submit', (e) => {
+        //初期化
+        const errorElems = validationForm.querySelectorAll('.' + errorClassName);
+        errorElems.forEach( (elem) => {
+            elem.remove(); 
+        });
+        requiredElems.forEach( (elem) => {
+            const elemValue = elem.value.trim(); 
+            if(elemValue.length === 0) {
+                //空欄ならエラーメッセージを表示
+                createError(elem, '入力は必須です');
+                e.preventDefault();
+            }
+        });
+    });
+};

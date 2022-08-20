@@ -10,10 +10,14 @@
     padding: 0 2rem;
     &__content {
         display: flex;
+        justify-content: space-between;
         padding: 0 calc(2rem + 3.7rem);
         align-items: center;
         height: 9.4rem;
         font-weight: bold;
+        @include breakpoint(medium) {
+            position: relative;
+        }
     }
     &__logo {
         display: flex;
@@ -26,10 +30,62 @@
             margin-right: 1.6rem;
         }
     }
+    &__navWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &.is-active {
+            ul {
+            transform: translateX(35%);
+            }
+            .l-header__blackBg {
+                opacity: 0.3;
+                visibility: visible;
+            }
+            .l-header__spOpen span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 50%;
+            }
+            .l-header__spOpen span:nth-child(2) {
+                opacity: 0;
+            }
+            .l-header__spOpen span:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 50%;
+            }
+        }
+    }
     &__nav {
         display: flex;
         justify-content: space-between;
         width: 25.2rem;
+        margin-right: min(13vw, 18.4rem);
+        @include breakpoint(large) {
+            width: 20rem;
+            margin-right: 8vw;
+        }
+        @include breakpoint(medium) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 80%;
+            height: 100vh;
+            transform: translateX(135%); 
+            background-color: $color-main; 
+            transition: ease .4s;
+            display: block;
+            text-align: center;
+            padding: 15rem 3rem 20rem 0;
+            z-index: 10;
+            li {
+                font-size: 2.4rem;
+                line-height: 8rem;
+                :hover {
+                    border-bottom: 2px solid $color-blue;
+                }
+            }
+        }
     }
     .c-btn {
         margin-left: auto;
@@ -39,6 +95,8 @@
         width: 4rem;
         height: 3.2rem;
         position: relative;
+        z-index: 100;
+        margin-left: 3rem;
         & span {
             position: absolute;
             display: block;
@@ -48,16 +106,32 @@
             left: 0;
             &:nth-child(1) {
                 top: 0;
+                transition: ease .4s;
             }
             &:nth-child(2) {
                 top: 50%;
                 transform: translateY(-50%);
+                transition: ease .4s;
             }
             &:nth-child(3) {
                 top: 100%;
                 transform: translateY(-100%);
+                transition: ease .4s;   
             }
         }
+    }
+    &__blackBg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        cursor: pointer;
+        z-index: 5;
     }
     @include breakpoint(large) {
         &__content {
@@ -67,17 +141,11 @@
         &__logo {
             margin-right: 0;
         }
-        &__nav {
-            width: 20rem;
-        }
         .c-btn {
             margin-left: 0;
         }
     }
     @include breakpoint(medium) {
-        &__nav {
-            display: none;
-        }
         &__spOpen {
             display: block;
         }
