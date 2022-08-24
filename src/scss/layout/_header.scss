@@ -73,17 +73,18 @@
             height: 100vh;
             transform: translateX(135%); 
             background-color: $color-main; 
-            transition: ease .4s;
+            transition: ease .3s;
             display: block;
             text-align: center;
-            padding: 15rem 3rem 20rem 0;
+            padding: 15rem 10rem 20rem 6rem;
             z-index: 10;
             li {
                 font-size: 2.4rem;
                 line-height: 8rem;
-                :hover {
-                    border-bottom: 2px solid $color-blue;
-                }
+                border-bottom: 1px solid $color-font;
+            }
+            @include breakpoint(small) {
+                padding: 15rem 4rem 20rem 4rem;
             }
         }
     }
@@ -96,7 +97,7 @@
         height: 3.2rem;
         position: relative;
         z-index: 100;
-        margin-left: 3rem;
+        margin-left: 6vw;
         & span {
             position: absolute;
             display: block;

@@ -1,16 +1,19 @@
 @use '../../foundation/_variable' as *;
 
 .p-fv {
+    display: block;
     width: 100%;
     padding: 13.1rem 2rem 11.3rem;
-    background: url("../../../../public/img/top_bg.svg") right -50px top -100px / 50% no-repeat;
+    background-image: url("../../../../public/img/top_bg.png");
+    background-position: right -8.5rem top -12.4rem;
+    background-repeat: no-repeat;
     @include breakpoint(small) {
         padding: 8rem 2rem;
     }
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         padding: 0 3.7rem;
         @include breakpoint(medium) {
             display: block;

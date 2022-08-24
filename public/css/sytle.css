@@ -129,18 +129,21 @@ li {
     height: 100vh;
     transform: translateX(135%);
     background-color: #EEFBFB;
-    transition: ease 0.4s;
+    transition: ease 0.3s;
     display: block;
     text-align: center;
-    padding: 15rem 3rem 20rem 0;
+    padding: 15rem 10rem 20rem 6rem;
     z-index: 10;
   }
   .l-header__nav li {
     font-size: 2.4rem;
     line-height: 8rem;
+    border-bottom: 1px solid #333333;
   }
-  .l-header__nav li :hover {
-    border-bottom: 2px solid #3BA6C9;
+}
+@media (max-width: 768px) and (max-width: 576px) {
+  .l-header__nav {
+    padding: 15rem 4rem 20rem 4rem;
   }
 }
 .l-header .c-btn {
@@ -152,7 +155,7 @@ li {
   height: 3.2rem;
   position: relative;
   z-index: 100;
-  margin-left: 3rem;
+  margin-left: 6vw;
 }
 .l-header__spOpen span {
   position: absolute;
@@ -306,9 +309,12 @@ li {
 }
 
 .p-fv {
+  display: block;
   width: 100%;
   padding: 13.1rem 2rem 11.3rem;
-  background: url("../../../../public/img/top_bg.svg") right -50px top -100px/50% no-repeat;
+  background-image: url("../../../../public/img/top_bg.png");
+  background-position: right -8.5rem top -12.4rem;
+  background-repeat: no-repeat;
 }
 @media (max-width: 576px) {
   .p-fv {
@@ -318,7 +324,7 @@ li {
 .p-fv__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 3.7rem;
 }
 @media (max-width: 768px) {
@@ -812,6 +818,10 @@ li {
 }
 .p-contact .c-btn {
   margin: 0 auto;
+}
+.p-contact__thanks {
+  text-align: center;
+  margin-bottom: 3.6rem;
 }
 
 .u-flex__rowReverse {
