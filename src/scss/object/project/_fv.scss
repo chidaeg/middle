@@ -4,17 +4,27 @@
     display: block;
     width: 100%;
     padding: 13.1rem 2rem 11.3rem;
-    background-image: url("../../../../public/img/top_bg.png");
-    background-position: right -8.5rem top -12.4rem;
+    background-image: url(https://chiaki-coding.site/yourcoding/public/img/top_bg.svg);
+    background-position: right -3rem top -34rem;
     background-repeat: no-repeat;
+    background-size: 100rem;
     @include breakpoint(small) {
         padding: 8rem 2rem;
+        background-position: right -20rem top -12.4rem;
+    }
+    @include breakpoint(xx-large) {
+        background-position: right -8.5rem top -12.4rem;
+        background-size: auto;
     }
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         padding: 0 3.7rem;
+        @include breakpoint(x-large) {
+            justify-content: space-around;
+            padding: 0;
+        }
         @include breakpoint(medium) {
             display: block;
             text-align: center;
@@ -51,7 +61,10 @@
     }
     &__img {
         @include breakpoint(large) {
-            min-width: 40rem;
+            max-width: 50rem;
+            min-width: 35rem;
+            margin: 0 auto;
+
         } 
         @include breakpoint(small) {
             max-width: 70%;

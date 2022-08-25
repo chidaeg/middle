@@ -89,7 +89,6 @@ const swiper = new Swiper('.swiper', {
         576: {
             slidesPerView: 1,
             spaceBetween: 28,
-
         },
         768: {
             slidesPerView: 1,
@@ -125,7 +124,8 @@ links.forEach(link => {
 // --------------------------------
 // 問い合わせフォームの入力チェック
 // --------------------------------
-const validationForm = document.querySelector('.js-validation');
+
+const validationForm = document.querySelector('#form');
 if(validationForm) {
     const errorClassName = 'js-error';
     const requiredElems = document.querySelectorAll('.js-required');
@@ -137,10 +137,10 @@ if(validationForm) {
     }
     const privacyCheck = document.getElementById('agreement');
     const submit = document.getElementById('js-submit');
-
-    requiredElems.forEach( (elem) => {
-        elem.addEventListener('change', () => {
-        const elemValue = elem.value.trim(); 
+        
+    validationForm.addEventListener('change', (e) => {
+        requiredElems.forEach( (elem) => {
+            const elemValue = elem.value.trim(); 
         if(
             elemValue.length !== 0 &&
             //プライバシーチェックがチェックありなら

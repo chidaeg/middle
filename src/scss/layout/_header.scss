@@ -1,7 +1,8 @@
 @use '../foundation/_variable' as *;
 
 .l-header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 999;
     background-color: $color-base;
@@ -134,7 +135,7 @@
         cursor: pointer;
         z-index: 5;
     }
-    @include breakpoint(large) {
+    @include breakpoint(x-large) {
         &__content {
             padding: 0;
             justify-content: space-around;

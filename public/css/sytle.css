@@ -24,6 +24,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  padding-top: 9.4rem;
+}
+
 img,
 video,
 object {
@@ -51,8 +55,8 @@ li {
 }
 
 .l-header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 999;
   background-color: #fff;
@@ -192,7 +196,7 @@ li {
   cursor: pointer;
   z-index: 5;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .l-header__content {
     padding: 0;
     justify-content: space-around;
@@ -223,6 +227,11 @@ li {
   text-align: center;
   font-weight: bold;
 }
+@media (max-width: 576px) {
+  .l-footer__content {
+    padding: 2rem 2rem;
+  }
+}
 .l-footer__logo {
   font-size: 2.4rem;
   line-height: 1.46;
@@ -244,6 +253,7 @@ li {
   .l-footer__nav ul {
     flex-direction: column;
     gap: 1.6rem;
+    margin-bottom: 3rem;
   }
 }
 .l-footer small {
@@ -312,13 +322,21 @@ li {
   display: block;
   width: 100%;
   padding: 13.1rem 2rem 11.3rem;
-  background-image: url("../../../../public/img/top_bg.png");
-  background-position: right -8.5rem top -12.4rem;
+  background-image: url(https://chiaki-coding.site/yourcoding/public/img/top_bg.svg);
+  background-position: right -3rem top -34rem;
   background-repeat: no-repeat;
+  background-size: 100rem;
 }
 @media (max-width: 576px) {
   .p-fv {
     padding: 8rem 2rem;
+    background-position: right -20rem top -12.4rem;
+  }
+}
+@media (max-width: 1400px) {
+  .p-fv {
+    background-position: right -8.5rem top -12.4rem;
+    background-size: auto;
   }
 }
 .p-fv__wrapper {
@@ -326,6 +344,12 @@ li {
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 3.7rem;
+}
+@media (max-width: 1200px) {
+  .p-fv__wrapper {
+    justify-content: space-around;
+    padding: 0;
+  }
 }
 @media (max-width: 768px) {
   .p-fv__wrapper {
@@ -370,7 +394,9 @@ li {
 }
 @media (max-width: 992px) {
   .p-fv__img {
-    min-width: 40rem;
+    max-width: 50rem;
+    min-width: 35rem;
+    margin: 0 auto;
   }
 }
 @media (max-width: 576px) {
@@ -396,7 +422,7 @@ li {
 }
 @media (max-width: 992px) {
   .p-features {
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
   }
 }
 .p-features .c-sectionTitle {
@@ -426,17 +452,16 @@ li {
 }
 @media (max-width: 768px) {
   .p-features__flex {
-    display: block;
+    flex-direction: column;
+    align-items: center;
+  }
+  .p-features__flex.u-flex__rowReverse {
+    flex-direction: column;
+    align-items: center;
   }
 }
 .p-features__img img {
   width: 100%;
-  max-width: 38rem;
-}
-@media (max-width: 992px) {
-  .p-features__img img {
-    min-width: 30rem;
-  }
 }
 @media (max-width: 768px) {
   .p-features__img img {
@@ -483,6 +508,97 @@ li {
     margin: 0 auto;
   }
 }
+.p-features__speed .p-features__heading {
+  margin-bottom: 4.9rem;
+}
+.p-features__speed .p-features__flex {
+  margin-bottom: 8.6rem;
+  gap: min(13vw, 15.7rem);
+}
+.p-features__speed .p-features__img {
+  max-width: 38rem;
+  margin-left: 5.7rem;
+}
+.p-features__speed .p-features__text {
+  margin-top: 4.7rem;
+  min-width: 50.2rem;
+  margin-bottom: 3.7rem;
+}
+.p-features__speed .p-features__text p:first-child {
+  margin-bottom: 4.5rem;
+  line-height: 1.72;
+}
+.p-features__quality .p-features__heading {
+  margin-bottom: 5.9rem;
+}
+.p-features__quality .p-features__flex {
+  gap: min(7vw, 8.4rem);
+  margin-bottom: 13.6rem;
+}
+.p-features__quality .p-features__img {
+  max-width: 47.9rem;
+}
+.p-features__quality .p-features__text {
+  max-width: 44.7rem;
+  margin: 0.2rem 0 8rem;
+}
+.p-features__quality .p-features__text p:first-child {
+  margin-bottom: 4rem;
+  line-height: 1.82;
+}
+.p-features__response .p-features__heading {
+  margin-bottom: 6.2rem;
+}
+.p-features__response .p-features__flex {
+  gap: min(14vw, 17.3rem);
+}
+.p-features__response .p-features__img {
+  max-width: 40rem;
+  margin-left: 2.9rem;
+}
+.p-features__response .p-features__text {
+  max-width: 35rem;
+  margin: 2rem 8.7rem 0 0;
+}
+.p-features__response .p-features__text p:first-child {
+  margin-bottom: 3.3rem;
+  line-height: 1.82;
+}
+@media (max-width: 1200px) {
+  .p-features__speed .p-features__img, .p-features__quality .p-features__img, .p-features__response .p-features__img {
+    min-width: 38rem;
+    margin-left: 0;
+  }
+  .p-features__speed .p-features__flex, .p-features__quality .p-features__flex, .p-features__response .p-features__flex {
+    justify-content: space-around;
+    gap: 3rem;
+    margin-bottom: 10rem;
+  }
+  .p-features__speed .p-features__text, .p-features__quality .p-features__text, .p-features__response .p-features__text {
+    margin: 0;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
+@media (max-width: 992px) {
+  .p-features__speed .p-features__img, .p-features__quality .p-features__img, .p-features__response .p-features__img {
+    max-width: 30rem;
+    min-width: auto;
+  }
+  .p-features__speed .p-features__text, .p-features__quality .p-features__text, .p-features__response .p-features__text {
+    min-width: 30rem;
+  }
+}
+@media (max-width: 992px) {
+  .p-features__speed .p-features__img, .p-features__quality .p-features__img, .p-features__response .p-features__img {
+    max-width: 36rem;
+    min-width: 30rem;
+  }
+  .p-features__speed .p-features__text, .p-features__quality .p-features__text, .p-features__response .p-features__text {
+    min-width: 30rem;
+  }
+}
 
 .p-price {
   background-color: #EEFBFB;
@@ -507,7 +623,7 @@ li {
   }
 }
 .p-price__table dd, .p-price__table dt {
-  padding: 3.5rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid #E5E5E5;
 }
 @media (max-width: 576px) {
@@ -553,6 +669,7 @@ li {
   text-align: center;
   padding-bottom: 6.8rem;
   color: #444444;
+  font-weight: bold;
 }
 
 .p-faq {
@@ -565,7 +682,7 @@ li {
 .p-faq__table {
   font-weight: bold;
   font-size: 1.4rem;
-  line-height: 1.8;
+  line-height: 1.65;
   max-width: 90.7rem;
   margin: 0 auto;
 }
@@ -606,6 +723,9 @@ li {
 .p-blog .c-inner {
   max-width: 1227px;
 }
+.p-blog .c-sectionTitle {
+  margin-bottom: 5.4rem;
+}
 .p-blog__cardUnit {
   display: flex;
   gap: 3rem;
@@ -641,7 +761,7 @@ li {
   }
 }
 .p-blog__cardText {
-  padding: 1.4rem 0 0 1.8rem;
+  padding: 1.4rem 3.1rem 0 1.8rem;
   font-size: 1.8rem;
   line-height: 1.44;
 }
@@ -654,7 +774,7 @@ li {
   display: inline-block;
   position: absolute;
   font-size: 1.6rem;
-  line-height: 1.625;
+  line-height: 1.5;
   right: 3.2rem;
   bottom: 1rem;
   color: #444444;
@@ -662,9 +782,10 @@ li {
 
 .p-works.l-section {
   padding: 5.5rem 2rem 9rem;
+  overflow: hidden;
 }
 .p-works .c-inner {
-  max-width: 108rem;
+  max-width: 107.8rem;
 }
 @media (max-width: 992px) {
   .p-works .c-inner {
@@ -683,8 +804,14 @@ li {
   border-radius: 8px;
   font-weight: bold;
 }
+.p-works_cardImg {
+  width: 32.2rem;
+  height: 21rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .p-works__cardText {
-  padding: 1.8rem;
+  padding: 1.8rem 1.8rem 0;
 }
 .p-works__cardHeading {
   margin-bottom: 3rem;
@@ -698,7 +825,7 @@ li {
 
 .p-contact {
   background: linear-gradient(to right, #05A5FA, #67FFD6 80%, #63FBD7);
-  padding-bottom: 7rem;
+  padding: 6.3rem 2rem 7rem;
 }
 .p-contact .c-sectionTitle {
   margin-bottom: 3.6rem;
@@ -706,11 +833,15 @@ li {
 .p-contact .c-sectionTitle__title, .p-contact .c-sectionTitle__en {
   color: #fff;
 }
+.p-contact .c-sectionTitle__title {
+  margin-bottom: 0.7rem;
+}
 .p-contact__message {
   color: #fff;
   line-height: 1.5;
   text-align: center;
   margin-bottom: 4.4rem;
+  font-weight: bold;
 }
 .p-contact__form {
   max-width: 90.8rem;
@@ -731,6 +862,7 @@ li {
 .p-contact__item label {
   display: block;
   margin-bottom: 3.9rem;
+  position: relative;
 }
 @media (max-width: 576px) {
   .p-contact__item label {
@@ -739,16 +871,19 @@ li {
 }
 .p-contact__item label::after {
   content: "必須";
+  position: absolute;
+  top: -3px;
   display: inline-block;
   text-align: center;
   width: 6rem;
   height: 3rem;
-  margin-left: 2rem;
+  margin-left: 2.2rem;
   font-size: 1.4rem;
-  line-height: 1.85;
+  line-height: 3rem;
   color: #fff;
   background-color: #0C449B;
   border-radius: 10px;
+  font-weight: bold;
 }
 .p-contact__item input {
   background: #EEFBFB;

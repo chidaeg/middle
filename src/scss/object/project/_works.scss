@@ -3,9 +3,10 @@
 .p-works {
     &.l-section {
         padding: 5.5rem 2rem 9rem;
+        overflow: hidden;
     }
     & .c-inner {
-        max-width: 108rem;
+        max-width: 107.8rem;
         @include breakpoint(large) {
             max-width: 32rem;
         }
@@ -22,8 +23,13 @@
         border-radius: 8px;
         font-weight: bold;
     }
+    &_cardImg {
+        width: 32.2rem;
+        height: 21rem;
+        object-fit: cover;
+    }
     &__cardText {
-        padding: 1.8rem;
+        padding: 1.8rem 1.8rem 0 ;
     }
     &__cardHeading {
         margin-bottom: 3rem;

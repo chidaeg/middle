@@ -20,7 +20,7 @@
         box-shadow: 0px 3px 6px $color-boxshadow;
         & dd,
         & dt {
-            padding: 3.5rem 0;
+            padding: 2rem 0;
             border-bottom: 1px solid $color-lightgray-100;
             @include breakpoint(small) {
                 padding: 2rem 0;
@@ -60,6 +60,7 @@
         text-align: center;
         padding-bottom: 6.8rem;
         color: $color-font-100;
+        font-weight: bold;
     }
 
 }

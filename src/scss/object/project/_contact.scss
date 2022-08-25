@@ -2,12 +2,15 @@
 
 .p-contact {
     background: linear-gradient(to right, $color-linearRight, $color-linearMiddle 80%, $color-linearLeft);
-    padding-bottom: 7rem;
+    padding: 6.3rem 2rem 7rem; 
     & .c-sectionTitle {
         margin-bottom: 3.6rem;
         &__title,
         &__en {
             color: $color-base;
+        }
+        &__title {
+            margin-bottom: .7rem;
         }
     }
     &__message {
@@ -15,6 +18,7 @@
         line-height: 1.5;
         text-align: center;
         margin-bottom: 4.4rem;
+        font-weight: bold;
     }
     &__form {
         max-width: 90.8rem;
@@ -32,21 +36,25 @@
         label{
             display: block;
             margin-bottom: 3.9rem;
+            position: relative;
             @include breakpoint(small) {
                 margin-bottom: 2rem;
             }
             &::after {
                 content: "必須";
+                position: absolute;
+                top: -3px;
                 display: inline-block;
                 text-align: center;
                 width: 6rem;
                 height: 3rem;
-                margin-left: 2rem;
+                margin-left: 2.2rem;
                 font-size: 1.4rem;
-                line-height: 1.85;
+                line-height: 3rem;
                 color: $color-base;
                 background-color: $color-navy;
                 border-radius: 10px;
+                font-weight: bold;
             }
         }
         input {

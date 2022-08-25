@@ -6,6 +6,9 @@
     & .c-inner {
         max-width: 1227px;
     }
+    .c-sectionTitle {
+        margin-bottom: 5.4rem;
+    }
     &__cardUnit {
         display: flex;
         gap: 3rem;
@@ -35,7 +38,7 @@
         }
     }
     &__cardText {
-        padding: 1.4rem 0 0 1.8rem;
+        padding: 1.4rem 3.1rem 0 1.8rem;
         font-size: 1.8rem;
         line-height: 1.44;
         @include breakpoint(large) {
@@ -46,7 +49,7 @@
         display: inline-block;
         position: absolute;
         font-size: 1.6rem;
-        line-height: 1.625;
+        line-height: 1.5;
         right: 3.2rem;
         bottom: 1rem;
         color: $color-font-100;

@@ -3,7 +3,7 @@
 .p-features {
     padding: 7.1rem 2rem 15.4rem;
     @include breakpoint(large) {
-        padding-bottom: 5rem;
+        padding-bottom: 10rem;
     }
     .c-sectionTitle {
         margin-bottom: 5.7rem;
@@ -28,15 +28,16 @@
             gap: 5vw;  
         }
         @include breakpoint(medium) {
-            display: block;
+            flex-direction: column;
+            align-items: center;
+            &.u-flex__rowReverse {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
     &__img img{
         width: 100%;
-        max-width: 38rem;
-        @include breakpoint(large) {
-            min-width: 30rem;
-        }
         @include breakpoint(medium) {
             margin: 0 auto;
         }
@@ -73,66 +74,103 @@
             }
         }
     }
-    // &__speed {
-    //     .p-features__heading {
-    //         margin-bottom: 4.9rem;
-    //     }
-    //     .p-features__flex {
-            // margin-bottom: 8.6rem;
-            // gap: min(13vw, 15.7rem);
-    //     }
-    //     .p-features__img {
-            // max-width: 38rem;
-    //     }
-    //     .p-features__text {
-    //         margin-top: 4.7rem;
-    //         min-width: 50.2rem;
-    //         margin-bottom: 3.7rem;
-    //         & p:first-child {
-    //             margin-bottom: 4.5rem;
-    //             line-height: 1.72;
-    //         }
-    //     }
-    // }
-    // &__quality {
-    //     .p-features__heading {
-    //         margin-bottom: 6.1rem;
-    //     }
-    //     .p-features__flex {
-    //         gap: min(7vw, 8.4rem);
-    //         margin-bottom: 13.6rem;
-    //     }
-    //     .p-features__img {
-    //         max-width: 47.9rem;
-    //     }
-    //     .p-features__text {
-    //         min-width: 44.7rem;
-    //         margin-bottom: 8rem;
-    //         padding-left: 2.9rem;
-    //         & p:first-child {
-    //             margin-bottom: 4rem;
-    //             line-height: 1.82;
-    //         }
-    //     }
-    // }
-    // &__response {
-    //     .p-features__heading {
-    //         margin-bottom: 6.2rem;
-    //     }
-    //     .p-features__flex {
-    //         gap: min(14vw, 17.3rem);
-    //     }
-    //     .p-features__img {
-    //         max-width: 40rem;
-    //         margin-left: 2.9rem;
-    //     }
-    //     .p-features__text {
-    //         min-width: 35rem;
-    //         margin: 2rem 8.7rem 8rem 0;
-    //         & p:first-child {
-    //             margin-bottom: 4rem;
-    //             line-height: 1.82;
-    //         }
-    //     }
-    // }
+    &__speed {
+        .p-features__heading {
+            margin-bottom: 4.9rem;
+        }
+        .p-features__flex {
+            margin-bottom: 8.6rem;
+            gap: min(13vw, 15.7rem);
+        }
+        .p-features__img {
+            max-width: 38rem;
+            margin-left: 5.7rem;
+        }
+        .p-features__text {
+            margin-top: 4.7rem;
+            min-width: 50.2rem;
+            margin-bottom: 3.7rem;
+            & p:first-child {
+                margin-bottom: 4.5rem;
+                line-height: 1.72;
+            }
+        }
+    }
+    &__quality {
+        .p-features__heading {
+            margin-bottom: 5.9rem;
+        }
+        .p-features__flex {
+            gap: min(7vw, 8.4rem);
+            margin-bottom: 13.6rem;
+        }
+        .p-features__img {
+            max-width: 47.9rem;
+        }
+        .p-features__text {
+            max-width: 44.7rem;
+            margin: .2rem 0 8rem;
+            & p:first-child {
+                margin-bottom: 4rem;
+                line-height: 1.82;
+            }
+        }
+    }
+    &__response {
+        .p-features__heading {
+            margin-bottom: 6.2rem;
+        }
+        .p-features__flex {
+            gap: min(14vw, 17.3rem);
+        }
+        .p-features__img {
+            max-width: 40rem;
+            margin-left: 2.9rem;
+        }
+        .p-features__text {
+            max-width: 35rem;
+            margin: 2rem 8.7rem 0 0;
+            & p:first-child {
+                margin-bottom: 3.3rem;
+                line-height: 1.82;
+            }
+        }
+    }
+    &__speed,
+    &__quality,
+    &__response {
+        @include breakpoint(x-large) {
+            .p-features__img {
+                min-width: 38rem;
+                margin-left: 0;
+            }
+            .p-features__flex {
+                justify-content: space-around;
+                gap: 3rem;
+                margin-bottom: 10rem;
+            }
+            .p-features__text {
+                margin: 0;
+                max-width: fit-content;
+            }
+        }
+        @include breakpoint(large) {
+            .p-features__img {
+                max-width: 30rem;
+                min-width: auto;
+            }
+            .p-features__text {
+                min-width: 30rem;
+            }
+        }
+        @include breakpoint(large) {
+            .p-features__img {
+                max-width: 36rem;
+                min-width: 30rem;
+            }
+            .p-features__text {
+                min-width: 30rem;
+            }
+        }
+    }
 }
