@@ -8,13 +8,13 @@
     background-position: right -3rem top -34rem;
     background-repeat: no-repeat;
     background-size: 100rem;
-    @include breakpoint(small) {
-        padding: 8rem 2rem;
-        background-position: right -20rem top -12.4rem;
-    }
     @include breakpoint(xx-large) {
         background-position: right -8.5rem top -12.4rem;
         background-size: auto;
+    }
+    @include breakpoint(small) {
+        padding: 8rem 2rem;
+        background-position: right -20rem top -12.4rem;
     }
     &__wrapper {
         display: flex;

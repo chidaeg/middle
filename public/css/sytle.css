@@ -327,16 +327,16 @@ li {
   background-repeat: no-repeat;
   background-size: 100rem;
 }
-@media (max-width: 576px) {
-  .p-fv {
-    padding: 8rem 2rem;
-    background-position: right -20rem top -12.4rem;
-  }
-}
 @media (max-width: 1400px) {
   .p-fv {
     background-position: right -8.5rem top -12.4rem;
     background-size: auto;
+  }
+}
+@media (max-width: 576px) {
+  .p-fv {
+    padding: 8rem 2rem;
+    background-position: right -20rem top -12.4rem;
   }
 }
 .p-fv__wrapper {
